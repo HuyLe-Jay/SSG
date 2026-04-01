@@ -12,21 +12,24 @@ A Python-based static site generator that converts Markdown content into a fully
 - Configurable base path for deployment to subdirectory hosts (e.g. GitHub Pages)
 
 ## Project Structure
+
+```
 .
-├── content/ # Markdown source files
-├── static/ # Static assets (CSS, images)
-├── docs/ # Generated site output (committed for GitHub Pages)
-├── src/ # Python source code
-│ ├── main.py
-│ ├── gencontent.py
-│ ├── copystatic.py
-│ ├── htmlnode.py
-│ ├── inline_markdown.py
-│ ├── markdown_blocks.py
-│ └── textnode.py
-├── template.html # HTML template used for all pages
-├── main.sh # Run local dev server
-└── build.sh # Build for production (GitHub Pages)
+├── content/          # Markdown source files
+├── static/           # Static assets (CSS, images)
+├── docs/             # Generated site output (committed for GitHub Pages)
+├── src/              # Python source code
+│   ├── main.py
+│   ├── gencontent.py
+│   ├── copystatic.py
+│   ├── htmlnode.py
+│   ├── inline_markdown.py
+│   ├── markdown_blocks.py
+│   └── textnode.py
+├── template.html     # HTML template used for all pages
+├── main.sh           # Run local dev server
+└── build.sh          # Build for production (GitHub Pages)
+```
 
 ## Requirements
 
@@ -46,7 +49,9 @@ bash main.sh
 
 Build the site with the correct base path for your GitHub Pages URL:
 
+  ```bash
   bash build.sh
+  ```
 
 The build.sh script runs:
 
@@ -64,7 +69,9 @@ To deploy, commit and push the docs/ directory after running build.sh.
 
 ### Running Tests
 
+  ```bash
   bash test.sh
+  ```
 
 Replace `USERNAME` and `REPO_NAME` with your actual GitHub username and repository name. You may also want to personalize the intro line if this is more than just a learning project.
 
